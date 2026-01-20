@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+
+    <style>
+        :root {
+            --masculino: lightblue;
+            --feminino: pink;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: lightgray;
+            transition: all 1s;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px #00000045;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .form input[type="button"] {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #resultado {
+            margin: 30px 0;
+        }
+
+        #avatar {
+            max-width: 250px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid lightgray;
+            opacity: 0.6;
+            transition: 1s;
+        }
+
+        #avatar.active {
+            opacity: 1;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Verificador de Idade</h1>
+
+    <main>
+        <div class="form">
+            <div class="form-group">
+                <label for="ano-nasc">Ano de Nascimento:</label>
+                <input type="number" name="ano-nasc" id="ano-nasc">
+            </div>
+
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <input type="radio" name="sexo" id="masc" value="Masculino">
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sexo" id="fem" value="Feminino">
+                <label for="fem">Feminino</label>
+            </div>
+
+            <input type="button" id="btn-verificar" value="Verificar" onclick="verificar()">
+        </div>
+
+        <p id="resultado">. . .</p>
+        <img src="img/vazio.jpg" alt="" id="avatar">
+    </main>
+
+    <footer>
+        <p>&copy; Arthur Gunes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
