@@ -1,9 +1,9 @@
-var país = 'França'
-console.log(`Vivendo em ${país}`)
-if (país == 'Brasil') {
-    console.log('Você é Brasileiro!')
-}
+var país = 'Brasil'
 
-else {
-    console.log('Você é estrangeiro!')
+console.log(`Vivendo em ${país}`)
+
+if (país == 'Brasil') { // Condição composta
+    console.log('Você é BRASILEIRO')
+} else {
+    console.log('Você é ESTRANGEIRO')
 }
